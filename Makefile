@@ -5,9 +5,16 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I.
 
-# Source files
-SRCS = src/ft_memchr.c \
-		src/ft_memcmp.c 
+
+SRCS = src/ft_memset.c\
+		src/ft_bzero.c\
+		src/ft_memcpy.c\
+		src/ft_memccpy.c\
+		src/ft_memmove.c\
+		src/ft_memchr.c\
+		src/ft_memcmp.c\
+		src/ft_strlen.c\
+		src/ft_strdup.c
 # Object files
 OBJS = $(SRCS:.c=.o)
 

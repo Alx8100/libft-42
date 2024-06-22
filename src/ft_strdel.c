@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_srdel.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 15:49:40 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/22 00:12:51 by abonanno         ###   ########.fr       */
+/*   Created: 2024/06/22 00:32:37 by abonanno          #+#    #+#             */
+/*   Updated: 2024/06/22 00:35:24 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+void	ft_strdel(char **as)
 {
-    char *ptr;
-    int size;
-    int i;
+	size_t	i;
 
-    size = ft_strlen((char *)s);
-    ptr = (char *)malloc(sizeof(char) * (size+1));
-    if (ptr == NULL)
-        return NULL;
-    i = 0;
-    while(i < size)
-    {
-        ptr[i] = s[i];
-        i++; 
-    }
-    ptr[i] = '\0';
-    return ptr;
+	i = 0;
+	if (as == NULL || *as == NULL)
+		return ;
+	free(*as);
+	*as = NULL;
 }
