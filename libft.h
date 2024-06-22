@@ -6,7 +6,7 @@
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 12:17:57 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/21 15:18:45 by abonanno         ###   ########.fr       */
+/*   Updated: 2024/06/22 20:40:37 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strncat(char *dest, char *src, unsigned long int size);
-char	*ft_strlcat(char *dest, char *src, unsigned long int size);
+size_t	ft_strlcat(char *dest, char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
