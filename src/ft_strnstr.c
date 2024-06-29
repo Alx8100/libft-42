@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/22 17:04:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/26 10:02:11 by abonanno         ###   ########.fr       */
+/*   Created: 2024/06/27 19:13:00 by abonanno          #+#    #+#             */
+/*   Updated: 2024/06/28 13:10:23 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, unsigned long int n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned char		*s1;
-	unsigned char		*s2;
-	int					i;
+	size_t	i;
+	int		j;
+	int		k;
 
-	s1 = (unsigned char *) dest;
-	s2 = (unsigned char *) src;
+	if (ft_strlen((char *)little) == 0)
+		return ((char *) big);
 	i = 0;
-	while ((unsigned long int) i < n)
+	j = 0;
+	k = 0;
+	while (i < len)
 	{
-		s1[i] = s2[i];
+		if (big[i] == little[j])
+		{
+			while (big[i + k] == little[j] && i + k < len)
+			{
+				k++;
+				j++;
+			}
+			k = 0;
+			if (j == ft_strlen((char *)little))
+				return ((char *)&big[i]);
+			j = 0;
+		}
 		i++;
 	}
-	return (dest);
+	return (NULL);
 }

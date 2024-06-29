@@ -16,9 +16,24 @@ SRCS = src/ft_memset.c \
        src/ft_strlen.c \
        src/ft_strdup.c \
        src/ft_strcpy.c \
+       src/ft_strncpy.c \
        src/ft_strcat.c \
        src/ft_strncat.c \
-       src/ft_strlcat.c
+       src/ft_strlcat.c \
+       src/ft_strchr.c \
+       src/ft_strrchr.c \
+       src/ft_strstr.c \
+       src/ft_strnstr.c \
+       src/ft_strcmp.c \
+       src/ft_strncmp.c \
+       src/ft_atoi.c \
+       src/ft_isalpha.c \
+       src/ft_isdigit.c\
+       src/ft_isalnum.c\
+       src/ft_isascii.c\
+       src/ft_isprint.c\
+       src/ft_toupper.c\
+       src/ft_tolower.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

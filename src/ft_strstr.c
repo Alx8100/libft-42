@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/22 17:04:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/26 10:02:11 by abonanno         ###   ########.fr       */
+/*   Created: 2024/06/26 10:31:03 by abonanno          #+#    #+#             */
+/*   Updated: 2024/06/27 19:20:36 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, unsigned long int n)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	unsigned char		*s1;
-	unsigned char		*s2;
-	int					i;
+	int i;
+	int j;
+	int k;
 
-	s1 = (unsigned char *) dest;
-	s2 = (unsigned char *) src;
+	if(ft_strlen((char *)needle) == 0)
+		return (char *)haystack;
 	i = 0;
-	while ((unsigned long int) i < n)
+	j = 0;
+	k = 0;
+	while(haystack[i])
 	{
-		s1[i] = s2[i];
+		if(haystack[i] == needle[j])
+		{
+			while(haystack[i + k] == needle[j])
+			{
+				k++;
+				j++;
+			}
+			k = 0;
+			if(j == ft_strlen((char*)needle))
+				return (char*)&haystack[i];
+			j = 0;
+		}
 		i++;
 	}
-	return (dest);
+	return NULL;
 }

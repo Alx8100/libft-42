@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/22 17:04:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/26 10:02:11 by abonanno         ###   ########.fr       */
+/*   Created: 2024/06/26 10:19:36 by abonanno          #+#    #+#             */
+/*   Updated: 2024/06/26 10:29:17 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, unsigned long int n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char		*s1;
-	unsigned char		*s2;
-	int					i;
+	char	ch;
+	int		i;
+	int		pos;
 
-	s1 = (unsigned char *) dest;
-	s2 = (unsigned char *) src;
 	i = 0;
-	while ((unsigned long int) i < n)
+	pos = -1;
+	ch = (char) c;
+	while (s[i])
 	{
-		s1[i] = s2[i];
+		if (s[i] == ch)
+			pos = i;
 		i++;
 	}
-	return (dest);
+	if (pos != -1)
+		return ((char *)&s[pos]);
+	if (s[i] == ch)
+		return ((char *)&s[i]);
+	return (NULL);
 }
