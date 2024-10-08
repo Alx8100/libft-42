@@ -6,15 +6,15 @@
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 12:56:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/28 12:58:52 by abonanno         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:24:29 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int toupper(int c)
+int	ft_toupper(int c)
 {
-    if('a' <= c && c <= 'z')
-        return c - 32;
-    return c;
+	if ('a' <= c && c <= 'z')
+		return (c - 32);
+	return (c);
 }

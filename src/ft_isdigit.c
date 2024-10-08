@@ -6,15 +6,15 @@
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 12:38:23 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/28 12:39:29 by abonanno         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:30:42 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if ('0' <= c && c <= '9')
-        return 1;
-    return 0;
+	if ('0' <= c && c <= '9')
+		return (1);
+	return (0);
 }

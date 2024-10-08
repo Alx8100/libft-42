@@ -6,7 +6,7 @@
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 12:17:57 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/27 19:27:46 by abonanno         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:08:54 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,6 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void    *ft_memalloc(size_t size);
+void    ft_memdel(void  **ap);
 #endif

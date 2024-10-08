@@ -6,25 +6,17 @@
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 00:04:17 by abonanno          #+#    #+#             */
-/*   Updated: 2024/06/22 00:29:48 by abonanno         ###   ########.fr       */
+/*   Updated: 2024/09/25 10:06:48 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	memdel(void **app)
+void	ft_memdel(void **ap)
 {
-	size_t	i;
-
-	i = 0;
-	if (app == NULL)
-		return ;
-	while (app[i])
+	if (ap && *ap)
 	{
-		free(app[i]);
-		app[i] = NULL;
-		i++;
+		free(*ap);
+		*ap = NULL;
 	}
-	free(app);
-	app = NULL;
 }
