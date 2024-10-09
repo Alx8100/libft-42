@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 12:56:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/10/08 22:13:18 by abonanno         ###   ########.fr       */
+/*   Created: 2024/10/08 12:47:34 by abonanno          #+#    #+#             */
+/*   Updated: 2024/10/08 20:57:42 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void    ft_striter(char *s, void (*f)(char *))
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+    size_t i;
+
+    i = 0;
+    while(s[i] != '\0')
+    {
+        (f)(&s[i]);
+        i++;
+    }
 }

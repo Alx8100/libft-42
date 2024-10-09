@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 12:56:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/10/08 22:13:18 by abonanno         ###   ########.fr       */
+/*   Created: 2024/10/08 20:58:22 by abonanno          #+#    #+#             */
+/*   Updated: 2024/10/08 20:59:23 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+    size_t i;
+
+    i = 0;
+    while(s[i] != '\0')
+    {
+        (f)(i, &s[i]);
+        i++;
+    }
 }

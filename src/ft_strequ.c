@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 12:56:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/10/08 22:13:18 by abonanno         ###   ########.fr       */
+/*   Created: 2024/10/08 22:39:06 by abonanno          #+#    #+#             */
+/*   Updated: 2024/10/08 22:50:54 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int ft_strequ(char const *s1, char const *s2)
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+    if(ft_strcmp(s1,s2) != 0)
+        return 0;
+    return 1;
 }

@@ -24,7 +24,7 @@ SRCS = src/ft_memset.c \
        src/ft_strrchr.c \
        src/ft_strstr.c \
        src/ft_strnstr.c \
-       src/ft_strcmp.c \
+       src/ft_strcmp.c\
        src/ft_strncmp.c \
        src/ft_atoi.c \
        src/ft_isalpha.c \
@@ -35,6 +35,20 @@ SRCS = src/ft_memset.c \
        src/ft_toupper.c\
        src/ft_tolower.c\
        src/ft_memalloc.c\
+       src/ft_memdel.c\
+       src/ft_strnew.c\
+       src/ft_strdel.c\
+       src/ft_strclr.c\
+       src/ft_striter.c\
+       src/ft_striteri.c\
+       src/ft_strmap.c\
+       src/ft_strmapi.c\
+       src/ft_strequ.c\
+       src/ft_strnequ.c\
+       src/ft_strsub.c\
+       src/ft_strjoin.c\
+       src/ft_strtrim.c\
+       src/ft_strsplit.c\
 
 # Object files
 OBJS = $(SRCS:.c=.o)

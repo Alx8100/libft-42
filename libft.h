@@ -6,7 +6,7 @@
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 12:17:57 by abonanno          #+#    #+#             */
-/*   Updated: 2024/09/24 17:08:54 by abonanno         ###   ########.fr       */
+/*   Updated: 2024/10/09 00:25:55 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_memcmp(const void *s1, const void *s2, unsigned long int n);
 int		ft_strlen(char *str);
 char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, char *src);
-char	*strncpy(char *dst, const char *src, size_t dsize);
+char	*ft_strncpy(char *dst, const char *src, size_t dsize);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strncat(char *dest, char *src, unsigned long int size);
 size_t	ft_strlcat(char *dest, char *src, size_t size);
@@ -35,7 +35,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-int     strcmp(const char *s1, const char *s2);
+int     ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, unsigned long int n);
 int		ft_atoi(const char *nptr);
 int		ft_isalpha(int c);
@@ -47,4 +47,17 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void    *ft_memalloc(size_t size);
 void    ft_memdel(void  **ap);
+char	*ft_strnew(size_t size);
+void    ft_strdel(char **as);
+void    ft_strclr(char *s);
+void    ft_striter(char *s, void (*f)(char *));
+void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+char    *ft_strmap(char const *s, char (*f)(char));
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int     ft_strequ(char const *s1, char const *s2);
+int     ft_strnequ(char const *s1, char const *s2, size_t n);
+char    *ft_strsub(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const*s2);
+char    *ft_strtrim(char const *s);
+char    **ft_strsplit(char const *s, char c);
 #endif

@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 12:56:42 by abonanno          #+#    #+#             */
-/*   Updated: 2024/10/08 22:13:18 by abonanno         ###   ########.fr       */
+/*   Created: 2024/10/08 12:12:09 by abonanno          #+#    #+#             */
+/*   Updated: 2024/10/08 21:25:28 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strnew(size_t size)
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+    char *app;
+
+    app = (char *)malloc(sizeof(char) * (size + 1));
+    if (app == NULL)
+        return NULL;
+    app = ft_memset(app, '\0', size + 1);
+    return app;
 }
+/*int main()
+{
+    char * app = ft_strnew(10);
+    printf("%s","helloworld");
+    return 0;
+}*/
