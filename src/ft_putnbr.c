@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:47:34 by abonanno          #+#    #+#             */
-/*   Updated: 2024/11/14 01:20:57 by abonanno         ###   ########.fr       */
+/*   Created: 2024/10/09 20:41:19 by abonanno          #+#    #+#             */
+/*   Updated: 2024/11/14 01:12:40 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_putnbr(int n)
 {
-	size_t	i;
+	char	*app;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		(f)(&s[i]);
-		i++;
-	}
+	app = ft_itoa(n);
+	ft_putstr(app);
 }

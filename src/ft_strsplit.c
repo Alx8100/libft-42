@@ -6,7 +6,7 @@
 /*   By: abonanno <abonanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 00:26:24 by abonanno          #+#    #+#             */
-/*   Updated: 2024/10/09 02:16:09 by abonanno         ###   ########.fr       */
+/*   Updated: 2024/10/09 08:36:50 by abonanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ int    ft_findnwrld(char const *s, char c)
     }
     return wrld;
 }
+/*char    **ft_app_strsplit()
+{
+    
+}*/
 char    **ft_strsplit(char const *s, char c)
 {
     char **app; //var matrx
@@ -55,8 +59,10 @@ char    **ft_strsplit(char const *s, char c)
         if (s[k] == c && k != 0)
         {
             app[i] = ft_strsub(s,start,end-start + 1);
-            if(app == NULL)
+            if(*app == NULL)
+            {
                 return NULL;
+            }
         }
         while(s[k] == c)
             k++;
